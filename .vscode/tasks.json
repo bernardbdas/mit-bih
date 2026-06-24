@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Just: Initialize Environments (init)",
+      "label": "Just: Initialize Environment (init)",
       "type": "shell",
       "command": "just init",
       "problemMatcher": [],
@@ -13,22 +13,14 @@
       }
     },
     {
-      "label": "Just: Sync LTS (sync-lts)",
+      "label": "Just: Sync Dependencies (sync)",
       "type": "shell",
-      "command": "just sync-lts",
+      "command": "just sync",
       "problemMatcher": [],
-      "group": "build",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
-    },
-    {
-      "label": "Just: Sync Latest (sync-latest)",
-      "type": "shell",
-      "command": "just sync-latest",
-      "problemMatcher": [],
-      "group": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "presentation": {
         "reveal": "always",
         "panel": "new"
@@ -46,7 +38,7 @@
       }
     },
     {
-      "label": "Just: Clean Environments (clean)",
+      "label": "Just: Clean Environment (clean)",
       "type": "shell",
       "command": "just clean",
       "problemMatcher": [],

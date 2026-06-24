@@ -5,6 +5,8 @@
   "python.analysis.indexing": true,
   
   "[python]": {
+    "editor.cursorStyle": "line-thin",
+    "editor.cursorBlinking": "smooth",
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
@@ -17,6 +19,7 @@
     "justfile": "just",
     ".justfile": "just"
   },
+
 
   "files.exclude": {
     "**/__pycache__": true,
