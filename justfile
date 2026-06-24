@@ -5,8 +5,8 @@ init:
     echo "Creating data directories..."
     mkdir -p data/raw data/processed
 
-    echo "Creating .venv (Python 3.14)..."
-    uv venv .venv --python 3.14
+    echo "Creating .venv (Python 3.12)..."
+    uv venv .venv --python 3.12
 
     echo "Virtual environment created successfully!"
 

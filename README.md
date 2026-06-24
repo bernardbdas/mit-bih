@@ -3,7 +3,7 @@
 A Python library to explore, analyze, and train deep learning models on MIT-BIH datasets.
 
 <p align="left">
-  <a href="https://www.python.org"><img src="https://img.shields.io/badge/Python-3.14+-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
+  <a href="https://www.python.org"><img src="https://img.shields.io/badge/Python-3.12+-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
   <a href="https://github.com/astral-sh/uv"><img src="https://img.shields.io/badge/Astral_uv-0.11+-de5d68?style=for-the-badge&logo=astral&logoColor=white" alt="Astral uv"></a>
   <a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-2.12+-ee4c2c?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"></a>
   <a href="https://scikit-learn.org"><img src="https://img.shields.io/badge/scikit_learn-1.9+-f7931e?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn"></a>
@@ -39,7 +39,7 @@ You can synchronize dependencies and set up the default virtual environment (`.v
 
 #### Option A: Using `just` (Recommended)
 ```bash
-# 1. Initialize the virtual environment (.venv) using Python 3.14
+# 1. Initialize the virtual environment (.venv) using Python 3.12
 just init
 
 # 2. Sync all project dependencies
@@ -59,12 +59,12 @@ uv sync
 
 ## Dataset Download & Management
 
-This library uses the **`wfdb`** Python library to download, read, and write electrocardiogram (ECG) data from PhysioNet. We provide an automated helper script [scripts/download_datasets.py](file:///Users/bernard/Developer/FORKS/mit-bih/scripts/download_datasets.py) to download any of the supported MIT-BIH and other ECG datasets into [data/raw/](file:///Users/bernard/Developer/FORKS/mit-bih/data/raw/).
+This library uses the **`wfdb`** Python library to download, read, and write electrocardiogram (ECG) data from PhysioNet. We provide an integrated command-line interface (CLI) to download any of the supported MIT-BIH and other ECG datasets into [data/raw/](file:///Users/bernard/Developer/FORKS/mit-bih/data/raw/).
 
 ### 1. List Available Datasets
 To view all supported datasets and their corresponding PhysioNet slugs:
 ```bash
-uv run scripts/download_datasets.py --list
+uv run python -m mit_bih --list
 ```
 
 ### 2. Supported Datasets & Slugs
@@ -93,13 +93,13 @@ uv run scripts/download_datasets.py --list
 
 * **To download a specific dataset** (e.g. `mitdb`):
   ```bash
-  uv run scripts/download_datasets.py --db mitdb
+  uv run python -m mit_bih --db mitdb
   ```
   This will save all files (`.hea`, `.dat`, `.atr`, etc.) in `data/raw/mitdb/`.
 
 * **To download all supported datasets** sequentially:
   ```bash
-  uv run scripts/download_datasets.py --db all
+  uv run python -m mit_bih --db all
   ```
   > [!WARNING]
   > Downloading all datasets will require significant disk space (several gigabytes) and internet bandwidth.
