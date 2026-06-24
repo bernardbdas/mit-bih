@@ -1,0 +1,24 @@
+[project]
+name = "mit-bih"
+version = "0.1.0"
+description = "A Python Library to explore, analyze and train deep learning models on MIT-BIH datasets"
+readme = "README.md"
+authors = [
+    { name = "bernardbdas", email = "[EMAIL_ADDRESS]" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.0",
+    "numpy>=2.5.0",
+    "pandas>=3.0.3",
+    "scikit-learn>=1.9.0",
+    "torch>=2.12.1",
+    "torchaudio>=2.11.0",
+    "torchvision>=0.27.1",
+    "wfdb>=4.3.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.16,<0.12.0"]
+build-backend = "uv_build"
