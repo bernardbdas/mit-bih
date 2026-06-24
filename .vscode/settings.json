@@ -22,17 +22,13 @@
     "**/__pycache__": true,
     "**/.pytest_cache": true,
     "**/.mypy_cache": true,
-    "**/.venv": true,
-    "**/.venv-lts": true,
-    "**/.venv-latest": true
+    "**/.venv": false,
   },
 
   "search.exclude": {
     "**/__pycache__": true,
     "**/.pytest_cache": true,
     "**/.mypy_cache": true,
-    "**/.venv": true,
-    "**/.venv-lts": true,
-    "**/.venv-latest": true
+    "**/.venv": false,
   }
 }
