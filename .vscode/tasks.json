@@ -1,0 +1,74 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Just: Initialize Environments (init)",
+      "type": "shell",
+      "command": "just init",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Just: Sync LTS (sync-lts)",
+      "type": "shell",
+      "command": "just sync-lts",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Just: Sync Latest (sync-latest)",
+      "type": "shell",
+      "command": "just sync-latest",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Just: Lock Dependencies (lock)",
+      "type": "shell",
+      "command": "just lock",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Just: Clean Environments (clean)",
+      "type": "shell",
+      "command": "just clean",
+      "problemMatcher": [],
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Python: Run Tests (Unittest)",
+      "type": "shell",
+      "command": "uv run python -m unittest discover -s tests",
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
+}
