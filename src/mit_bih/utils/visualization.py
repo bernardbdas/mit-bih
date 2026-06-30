@@ -1,26 +1,34 @@
+"""
+Visualization utility helpers.
+
+This module provides helper functions to save matplotlib plots and figures
+directly into the project's assets/plots directory.
+"""
+
 import os
 import datetime
 import matplotlib.pyplot as plt
 
-def save_plot(filename, fig=None, base_dir=None, caption=None):
+
+def save_plot(filename: str, fig: plt.Figure | None = None, base_dir: str | None = None, caption: str | None = None) -> str:
     """
-    Saves a matplotlib figure with a timestamp in the active directory's assets/ subfolder,
+    Saves a matplotlib figure with a timestamp in the project's assets/plots/ subfolder,
     and optionally saves a sidecar text file containing the figure's caption.
-    
+
     Args:
-        filename (str): Name of the file (e.g. 'confusion_matrix' or 'loss_curve.png').
-        fig (matplotlib.figure.Figure, optional): The figure to save. If None, saves plt.gcf().
-        base_dir (str, optional): Target parent folder. Defaults to the current working directory.
-        caption (str, optional): Text caption describing the figure. Saved to a sidecar .txt file.
-        
+        filename: Name of the file (e.g. 'confusion_matrix' or 'loss_curve.png').
+        fig: The figure to save. If None, saves the active figure (plt.gcf()).
+        base_dir: Target parent folder. Defaults to the current working directory.
+        caption: Text caption describing the figure. Saved to a sidecar .txt file.
+
     Returns:
-        str: Absolute path to the saved figure image.
+        Absolute path to the saved figure image.
     """
     if base_dir is None:
         base_dir = os.getcwd()
 
-    today_str = datetime.date.today().strftime("%Y-%m-%d")
-    assets_dir = os.path.join(base_dir, "assets", today_str)
+    # Save directly to assets/plots as requested
+    assets_dir = os.path.join(base_dir, "assets", "plots")
     os.makedirs(assets_dir, exist_ok=True)
 
     name, ext = os.path.splitext(filename)

@@ -3,31 +3,26 @@
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.indexing": true,
-  
   "[python]": {
     "editor.cursorStyle": "line-thin",
     "editor.cursorBlinking": "smooth",
-    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit",
       "source.fixAll": "explicit"
     }
   },
-
   "files.associations": {
     "justfile": "just",
     ".justfile": "just"
   },
-
-
   "files.exclude": {
     "**/__pycache__": true,
     "**/.pytest_cache": true,
     "**/.mypy_cache": true,
     "**/.venv": false,
   },
-
   "search.exclude": {
     "**/__pycache__": true,
     "**/.pytest_cache": true,

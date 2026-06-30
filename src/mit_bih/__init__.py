@@ -1,4 +1,4 @@
-from mit_bih.visualization import save_plot
+from mit_bih.utils.visualization import save_plot
 from mit_bih.data import (
     DATABASES,
     AAMI_MAPPING,
@@ -31,4 +31,3 @@ __all__ = [
     "ECGCNN",
     "LoRALayer"
 ]
-
